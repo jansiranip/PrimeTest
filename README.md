@@ -1,4 +1,10 @@
 ## Progress Bar Demo
+Setting Up Instructions
+1. npm install
+2. npm start - To Start the server in port 3000
+3. npm test - To test the scripts
+4. npm run-script build - To create the build
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

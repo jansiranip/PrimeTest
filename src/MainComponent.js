@@ -64,7 +64,7 @@ class MainComponent extends Component {
         console.log(buttonData);
         if (buttonData !== undefined) {
             return (buttonData.map((buttons, index) => {
-                let btnValue;
+                let btnValue = buttons;
                 if (parseInt(buttons, 10) > 0) { btnValue = `+${buttons}`; }
                 return (<div className="col-sm-2" key={index}><button type="button" className="btn btn-primary" value={btnValue} onClick={this.makeProgress.bind(this)}>{btnValue}</button> </div>);
             }));
@@ -123,7 +123,7 @@ MainComponent.propTypes = {
         id: PropTypes.number.isRequired,
         completed: PropTypes.number.isRequired,
     }).isRequired),
-    addProgressBar: PropTypes.func.isRequired,
-    changeProgressBar: PropTypes.func.isRequired,
+    addProgressBar: PropTypes.func,
+    changeProgressBar: PropTypes.func,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(MainComponent);
